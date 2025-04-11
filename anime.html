@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>No Game No Life</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #fff;
+    }
+  
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+  
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  
+    header h1 {
+      font-size: 2.5em;
+      color: #ff4dc4;
+    }
+  
+    .tag {
+      background-color: #ff4dc4;
+      color: #fff;
+      padding: 3px 8px;
+      border-radius: 8px;
+      font-size: 0.7em;
+      margin-left: 10px;
+    }
+  
+    .detalle-anime {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+  
+    .poster {
+      width: 250px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px #ff4dc4;
+    }
+  
+    .info {
+      flex: 1;
+    }
+  
+    .sinopsis h2 {
+      color: #ff4dc4;
+      margin-bottom: 5px;
+    }
+  
+    .genero {
+      background-color: #292929;
+      padding: 3px 10px;
+      border-radius: 15px;
+      font-size: 0.9em;
+      color: #ff4dc4;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+  
+    .estado {
+      margin-top: 20px;
+    }
+  
+    .emision {
+      background-color: #00c853;
+      border: none;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: default;
+    }
+  
+    .acciones {
+      margin-top: 10px;
+    }
+  
+    .acciones button {
+      background-color: #ff4dc4;
+      color: white;
+      border: none;
+      padding: 10px 14px;
+      border-radius: 8px;
+      margin-right: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+  
+    .acciones button:hover {
+      background-color: #ff0080;
+    }
+  
+    .episodios h2 {
+      color: #ff4dc4;
+      margin-bottom: 15px;
+    }
+  
+    .episodio {
+      display: flex;
+      align-items: center;
+      background-color: #1e1e1e;
+      margin-bottom: 15px;
+      padding: 10px;
+      border-radius: 12px;
+      box-shadow: 0 0 8px #000;
+    }
+  
+    .thumb {
+      width: 120px;
+      height: 70px;
+      border-radius: 8px;
+      object-fit: cover;
+      margin-right: 15px;
+    }
+  
+    .info-episodio {
+      flex: 1;
+    }
+  
+    .btn {
+      display: inline-block;
+      background-color: #ff4dc4;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-top: 5px;
+      transition: background 0.3s ease;
+    }
+  
+    .btn:hover {
+      background-color: #ff0080;
+    }
+  
+    .play {
+      font-size: 1.4em;
+      background-color: transparent;
+      color: #ff4dc4;
+      border: none;
+      margin-right: 15px;
+      cursor: pointer;
+    }
+  
+    .visto {
+      font-size: 0.9em;
+      color: #ccc;
+      margin-left: auto;
+    }
+    #contenedor-video {
+      display: none;
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    #videoPlayer {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #ff4dc4;
+    }
+  
+    /* Responsive */
+    @media (max-width: 768px) {
+      .detalle-anime {
+        flex-direction: column;
+        align-items: center;
+      }
+  
+      .poster {
+        width: 100%;
+        max-width: 300px;
+      }
+  
+      .episodio {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+  
+      .thumb {
+        margin-bottom: 10px;
+      }
+  
+      .visto {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>No Game No Life <span class="tag">ANIME</span></h1>
+    </header>
+
+    <section class="detalle-anime">
+      <img src="https://images.justwatch.com/poster/307185012/s332/no-game-no-life" alt="No Game No Life" class="poster">
+
+      <div class="info">
+        <article class="sinopsis">
+          <h2>Sinopsis</h2>
+          <span class="genero">Acción</span>
+          <p>
+            La historia está protagonizada por Sora y Shiro, hermano y hermana, que son muy famosos en todo Internet como NEETs y 
+            hikikomoris que se pasan el día jugando a videojuegos, tanto que son una leyenda. Los dos consideran el mundo real como “un juego malo”. 
+            Un día, un chico llamado “Dios” les invoca a otro mundo. Allí, Dios ha prohibido las guerras y declara que en el mundo todo se decidirá mediante juegos, 
+            incluso cuáles serán las fronteras entre países.
+          </p>
+        </article>
+
+        <div class="estado">
+          <button class="emision">🟢 EN EMISIÓN</button>
+          <div class="acciones">
+            <button class="fav">❤️ Agregar a favoritos</button>
+            <button class="seguir">✔️ Seguir</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="episodios">
+      <h2>Lista de episodios</h2>
+
+      <div class="episodio">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv-bDI_qa5KPH17AeX4MPSg6_AUCTCVEjHpg&s" class="thumb" alt="Thumb episodio 1">
+        <div class="info-episodio">
+          <strong>No Game No Life</strong> <br>
+          <span>Capítulo 1</span>
+          <button class="btn" onclick="mostrarVideo('videos/cap 1 no game no life.mp4')">Ver No Game No Life</button>
+        </div>
+      </div>
+
+      
+      <div class="episodio">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv-bDI_qa5KPH17AeX4MPSg6_AUCTCVEjHpg&s" class="thumb" alt="Thumb episodio 2">
+        <div class="info-episodio">
+          <strong>No Game No Life</strong> <br>
+          <span>Capítulo 2</span>
+          <button class="btn" onclick="mostrarVideo('videos/cap 2 no game no life.mp4')">Ver No Game No Life</button>
+        </div>
+      </div>
+
+      <div class="episodio">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv-bDI_qa5KPH17AeX4MPSg6_AUCTCVEjHpg&s" class="thumb" alt="Thumb episodio 2">
+        <div class="info-episodio">
+          <strong>No Game No Life</strong> <br>
+          <span>Capítulo 3</span>
+          <button class="btn" onclick="mostrarVideo('videos/cap 3 no game no life.mp4')">Ver No Game No Life</button>
+        </div>
+      </div>
+
+      <div class="episodio">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv-bDI_qa5KPH17AeX4MPSg6_AUCTCVEjHpg&s" class="thumb" alt="Thumb episodio 2">
+        <div class="info-episodio">
+          <strong>No Game No Life</strong> <br>
+          <span>Capítulo 4</span>
+          <button class="btn" onclick="mostrarVideo('videos/cap 4 no game no lifi.mp4')">Ver No Game No Life</button>
+        </div>
+      </div>
+
+      <div class="episodio">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv-bDI_qa5KPH17AeX4MPSg6_AUCTCVEjHpg&s" class="thumb" alt="Thumb episodio 2">
+        <div class="info-episodio">
+          <strong>No Game No Life</strong> <br>
+          <span>Capítulo 5</span>
+          <button class="btn" onclick="mostrarVideo('videos/cap 5 no game no life.mp4')">Ver No Game No Life</button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- CONTENEDOR DEL VIDEO -->
+    <div id="contenedor-video">
+      <video id="videoPlayer" controls>
+        <source src="" type="video/mp4">
+        Tu navegador no soporta la reproducción de video.
+      </video>
+    </div>
+
+  </div>
+
+  <script>
+    function mostrarVideo(ruta) {
+      const contenedor = document.getElementById('contenedor-video');
+      const video = document.getElementById('videoPlayer');
+      video.src = ruta;
+      contenedor.style.display = 'block';
+      video.scrollIntoView({ behavior: "smooth" });
+      video.play();
+    }
+  </script>
+</body>
+
+</html>
